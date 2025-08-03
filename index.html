@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subtitle Sync Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Subtitle Sync Tool (.srt)</h2>
+    <p>Fix subtitles that are out of sync — all in your browser.</p>
+
+    <input type="file" id="srtFile" accept=".srt" />
+    <input type="number" id="shiftSeconds" placeholder="Enter shift in seconds (e.g., -2.5 or 3)" />
+    <input type="text" id="outputName" placeholder="Enter output filename (e.g., fixed_subs.srt)" />
+    <button onclick="shiftSubtitles()">Shift Subtitles</button>
+
+    <div class="footer">
+      Built by George SK | No backend | All local processing
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
