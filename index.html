@@ -3,26 +3,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Subtitle Sync Tool</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="background-quotes"></div>
   <div class="container">
-    <h1>🎬 Subtitle Sync Tool</h1>
-    <p class="tagline">Easily fix subtitle timing — fast, local, and private.</p>
-
-    <div class="card">
-      <input type="file" id="srtFile" accept=".srt" />
-      <input type="number" step="0.1" id="shiftSeconds" placeholder="Shift in seconds (e.g., -2.5 or 3)" />
-      <input type="text" id="outputName" placeholder="Output filename (e.g., fixed_subs.srt)" />
-      <button onclick="shiftSubtitles()">⚡ Shift Subtitles</button>
-    </div>
-
-    <div class="footer">
-      Built with 💻 by George SK | 100% Offline
-    </div>
+    <h1>Subtitle Sync Tool</h1>
+    <input type="file" id="subtitleFile" accept=".srt" />
+    <input type="number" id="timeShift" placeholder="Shift in seconds (e.g., -2.5)" />
+    <button onclick="syncSubtitles()">Sync Subtitles</button>
+    <a id="downloadLink" style="display: none;">Download Adjusted Subtitles</a>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
